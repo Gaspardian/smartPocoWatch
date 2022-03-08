@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Watch poco Smart</title>
+</head>
+
+<body>
+
+    <div class="quadrante">
+        <img src="images/quadrante.png" class="montante">
+        <div class="display">
+
+            <!--time/date-->
+            <div class="orologio active">
+                <div class="data">
+                    <h2 class="calendario-base">88 / 88 / 8888</h2>
+                    <h2 class="calendario">07 / 11 / 2021</h2>
+                </div>
+                <div class="day">domenica</div>
+                <div class="ora">
+                    <h1 class="oretta-base">88:88<span>:88</span></h1>
+                    <h1 class="oretta">00:00<span>:00</span></h1>
+                </div>
+            </div>
+
+            <!--cronometro-->
+            <div class="crono">
+                <div class="digital">
+                    <h1 class="time-base">88:88<span>:88</span></h1>
+                    <h1 class="time">00:00<span>:00</span></h1>
+                </div>
+                <div class="crono-button">
+                    <span class="crono-start active" id="crono-start">START</span>
+                    <span class="crono-stop" id="crono-stop">STOP</span>
+                    <span id="crono-reset">RESET</span>
+                </div>
+            </div>
+
+            <!--weather - meteo-->
+            <div class="weather">
+
+                <div class="search">
+                    <input type="text" id="city" class="citta">
+                    <span class="sync" id="getMeteo">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="561px" height="561px"
+                            viewBox="0 0 561 561" style="enable-background:new 0 0 561 561;" xml:space="preserve">
+                            <g>
+                                <g id="sync">
+                                    <path
+                                        d="M280.5,76.5V0l-102,102l102,102v-76.5c84.15,0,153,68.85,153,153c0,25.5-7.65,51-17.85,71.4l38.25,38.25
+                               C471.75,357,484.5,321.3,484.5,280.5C484.5,168.3,392.7,76.5,280.5,76.5z M280.5,433.5c-84.15,0-153-68.85-153-153
+                               c0-25.5,7.65-51,17.85-71.4l-38.25-38.25C89.25,204,76.5,239.7,76.5,280.5c0,112.2,91.8,204,204,204V561l102-102l-102-102V433.5z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="first_row">
+                    <div class="temperat" id="temp">
+                        <img id="sun_cloud" src="images/cloud.png">
+                        <img id="termometro" src="images/thermometer.png">
+                        <span id="temp_value">-20°C</span>
+                    </div>
+                </div>
+
+                <div class="second_row">
+                    <div class="umidit" id="humidity">
+                        <img id="wind" src="images/windrose_N.png">
+                        <img id="gocce" src="images/humidity.png">
+                        <span id="humid_value">50%</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--menu-->
+        <div class="menu">
+            <p><span class="spTime active">time</span> - <span class="spCrono">crono</span> - <span
+                    class="spMeteo">weather</span></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

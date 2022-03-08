@@ -1,0 +1,329 @@
+@font-face {
+font-family: 'Technology-Regular.woff';
+src: url('technology_2/Technology-Regular.woff')format('truetype');
+}
+body {
+    font-family: 'Technology-Regular.woff', sans-serif;
+    background: #222222;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+.quadrante{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+.quadrante .montante{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.quadrante .display{
+      position:absolute;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+}
+
+/*----------time----------*/
+.orologio {
+    display: none;
+}
+.orologio.active {
+    display: block;
+}
+.orologio .data{
+    font-size: 2rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.orologio .data .calendario-base{
+    color:#093327;
+    font-weight: 100;
+}
+.orologio .data .calendario{
+    font-weight: 100;
+    position:absolute;
+    color:#06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    z-index: 1;
+}
+.orologio .day{
+    font-weight: 100;
+    font-size: 2.5rem;
+    color:#06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.orologio .ora{
+    font-size: 4rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin:-72px 0 0 0;
+}
+.orologio .ora .oretta-base{
+    color:#093327;
+    font-weight: 100;
+}
+.orologio .ora .oretta{
+    font-weight: 100;
+    position:absolute;
+    color:#06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    z-index: 1;
+}
+.orologio .ora .oretta-base span{
+    font-size: 5rem;
+}
+.orologio .ora .oretta span{
+  font-size: 5rem;
+}
+/*----------fine time----------*/
+
+/*----------cronometro----------*/
+  .quadrante .display .crono{
+    display: none;
+}
+  .quadrante .display .crono.active{
+      display:block;
+  }
+  .quadrante .display .crono .digital{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.quadrante .display .crono .crono-button{
+    font-size: 2rem;
+    color:#093327;
+    margin-bottom: 100px;
+}
+.crono-start{
+    border: 2px solid #093327;
+    padding: 1rem;
+    margin: 0 1rem;
+    display: none;
+}
+.crono-stop{
+    border: 2px solid #093327;
+    padding: 1rem;
+    margin: 0 1rem;
+    display: none;
+}
+.crono-start.active{
+    display: inline;
+}
+.crono-stop.active{
+    display: inline;
+}
+#crono-reset{
+    border: 2px solid #093327;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+.crono-start:hover{
+    border: 2px solid #06fc2e;
+    cursor: pointer;
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    box-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+}
+.crono-stop:hover{
+    border: 2px solid #06fc2e;
+    cursor: pointer;
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    box-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+}
+#crono-reset:hover{
+    border: 2px solid #06fc2e;
+    cursor: pointer;
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    box-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+}
+  .quadrante .display .crono .time-base{
+      font-size: 8rem;
+      font-weight: 100;
+      color:#093327;
+  }
+  .quadrante .display .crono h1.time{
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 100;
+    color:#06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    z-index: 1;
+}
+  .quadrante .display .crono h1.time-base span{
+      font-size: 5rem;
+  }
+  .quadrante .display .crono h1.time span{
+    font-size: 5rem;
+}
+/**********fine cronometro***********/
+
+/**********weather-meteo***********/
+.quadrante .display .weather{
+    display: none;
+ /*   margin:60px 0 -120px 0;*/
+}
+.quadrante .display .weather.active{
+      display:block;
+ }
+.quadrante .display .weather .search{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+ }
+  .quadrante .display .weather .search .citta{
+    font-family: 'Technology-Regular.woff', sans-serif;
+    font-size: 2rem;
+    border: 2px solid #06fc2e;
+    box-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+    background: transparent;
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+    text-align: center;
+}
+.quadrante .display .weather .search .sync{
+    width: 50px;
+    height: auto;
+    border: 2px solid #06fc2e;
+    text-align: center;
+    justify-content: center;
+    margin: 0 20px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+}
+.quadrante .display .weather .search .sync svg{
+    width: 50px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    fill: #06fc2e;
+}
+.quadrante .display .weather .search .sync:hover{
+    -webkit-filter: drop-shadow( 0px 0px 10px rgba(74, 221, 16, 1));
+    filter: drop-shadow( 0px 0px 5px rgba(74, 221, 16, 1));
+    cursor: pointer;
+}
+/*********************************************************/
+.quadrante .display .weather .first_row{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.quadrante .display .weather .first_row .temperat #sun_cloud{
+    width: 80px;
+    height: auto;
+    margin-right: 50px;
+}
+.quadrante .display .weather .first_row .temperat{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.quadrante .display .weather .first_row .temperat img{
+    width: 80px;
+}
+.quadrante .display .weather .first_row .temperat span{
+ font-size: 5rem;   
+ margin-left: -20px;  
+ color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+    font-weight: 100;  
+}
+.quadrante .display .weather .second_row{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+}
+.quadrante .display .weather .second_row .umidit #wind{
+    width: 120px;
+    margin-right: 50px;
+}
+.quadrante .display .weather .second_row .umidit{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.quadrante .display .weather .second_row .umidit img{
+    width: 80px;
+}
+.quadrante .display .weather .second_row .umidit span{
+    font-size: 5rem;   
+    margin-left: 10px;  
+    color: #06fc2e;
+       text-shadow: 0px 0px 10px rgba(74, 221, 16, 0.5);
+       font-weight: 100;  
+   }
+
+/**********fine weather-meteo***********/
+
+/**********menu***********/
+.menu{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 420px;
+}
+ .menu p{
+      font-size: 2rem;
+      color: #093327;
+  }
+ .menu p .spTime:hover{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    cursor: pointer;
+}
+.menu p .spCrono:hover{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    cursor: pointer;
+}
+.menu p .spMeteo:hover{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+    cursor: pointer;
+}
+.menu p .spTime.active{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+}
+.menu .spCrono.active{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+}
+.menu p .spMeteo.active{
+    color: #06fc2e;
+    text-shadow: 0px 0px 10px rgba(74, 221, 16, 1);
+}
+/**********fine menu***********/
+
